@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h3 id="auth-links" style="color: #3333ff; margin-left: 40%;">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  HTML&CSS LESSONS
+</h3>
+
+    {% for htmls in htmls %}
+        <article class="media content-section">
+            <img class="rounded-cirlce article-img" src="{{ htmls.author.profile.image.url }}" alt="">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" style="font-size: 20px">{{ htmls.topic }}</a>
+                <small class="text-muted">{{ htmls.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="{% url 'html-detail' htmls.id %}">{{ htmls.title }}</a></h2>
+<!--              <p class="article-content">{{ htmls.content }}</p>-->
+            </div>
+            <br>
+          </article>
+    {% endfor  %}
+{% endblock content %}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us</title>
+    <style>
+        .csec {
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	background-attachment: fixed; 
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	top: 200px;
+	content: '';
+	transform-origin: top right;
+	transform: skewY(-10deg);
+	z-index: -1;
+}
+.back-contact {
+	margin-top: 0px;
+	transform: translateY(-50px);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.cc {
+	height: 400px;
+	width: 400px;
+	height: 500px;
+	border-radius: 10px;
+	justify-content: center;
+	box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
+	background: #fff;
+}
+.cc form {
+	margin: 5%;
+	margin-top: 40px;
+	width: 90%;
+	height: 90%;
+}
+.cc form label {
+	position: absolute;
+	color: #2E3D49;
+	font-size: 10px;
+	font-weight: 800;
+}
+.cc form input {
+	padding: 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px lightgray;
+	border: 1px solid rgba(0,0,0,0.2);
+	outline: none;
+	color: #2E3D49;
+	font-weight: 600;
+}
+.imp {
+	color: red;
+}
+form textarea {
+	width: 100%;
+	height: 100px;
+	box-shadow: inset 0 0 5px lightgray;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	outline: none;
+	color: #2E3D49;
+	font-weight: 600;
+	padding: 15px;
+}
+#csubmit {
+	margin-top: 20px; 
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	border-radius: 5px;
+	border-style: none;
+	outline: none;
+	width: 100%;
+	padding: 15px 25px;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+}
+img:hover{
+	font-weight: bold;
+    background: none;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgb(98, 0, 255),
+                0 0 25px rgb(98, 0, 255),
+                0 0 50px rgb(98, 0, 255),
+                0 0 200px rgb(98, 0, 255);
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+	 padding: 5px 5px 5px 5px;
+}
+    </style>
+</head>
+<body>
+    {% extends 'blog/base.html' %}
+    {% load static %}
+    {% block content %}
+        <div class="container" style="background: white; padding: 20px; margin-top: 10px; border-radius: 20px;">
+            <h1 style="text-align: center;"></h1>
+            <!-- CONTACT US -->
+        <div class="diffSection" id="contactus_section">
+            <center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+            <div class="csec"></div>
+            <div class="back-contact">
+                <div class="cc">
+                <form action="mailto:omotosoabiola9525@gmail.com" method="post" enctype="text/plain">
+                    <label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+                    <center>
+                    <input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+                    </center>
+                    <label>Email <span class="imp">*</span></label><br>
+                    <input type="email" name="mail" style="width: 100%" required="required"><br>
+                    <label>Message <span class="imp">*</span></label><br>
+                    <input type="text" name="message" style="width: 100%" required="required"><br>
+                    <label>Additional Details</label><br>
+                    <textarea name="addtional"></textarea><br>
+                    <button type="submit" id="csubmit">Send Message</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <h3 class="contact__subtitle">WHATSAPP</h3>
+        <a class="contact__text" href="http://api.whatsapp.com/send?phone=+2349045816857"><img src="{% static 'images/WhatsApp_icon.png' %}" style="width:52px;height:52px;"></a>
+        </div>
+    {% endblock content %}
+</body>
+</html>
+
+

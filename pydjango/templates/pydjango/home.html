@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h3 id="auth-links" style="color: #3333ff; margin-left: 40%;">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  DJANGO LESSONS
+</h3>
+    {% for pydjangos in pydjangos %}
+        <article class="media content-section">
+            <img class="rounded-cirlce article-img" src="{{ pydjangos.author.profile.image.url }}" alt="">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" style="font-size: 20px">{{ pydjangos.topic }}</a>
+                <small class="text-muted">{{ pydjangos.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="{% url 'pydjango-detail' pydjangos.id %}">{{ pydjangos.title }}</a></h2>
+<!--              <p class="article-content">{{ pydjangos.content }}</p>-->
+            </div>
+            <br>
+          </article>
+    {% endfor  %}
+{% endblock content %}

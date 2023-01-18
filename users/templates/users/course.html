@@ -1,0 +1,1110 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Courses</title>
+
+    <!-- Bootstrap CDN Link Here  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Custom Css Link Here  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icon Kit Link Here  -->
+    <script src="https://kit.fontawesome.com/800be1c8ec.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* navbar */
+.bg-color{
+    background-color: rgb(120, 24, 175);
+}
+
+/* Carousel Item  */
+.carousel-img {
+    filter: brightness(50%);
+}
+
+.e-larning-carousel-caption {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 15%;
+    left: 15%;
+    color: #fff;
+    text-align: center;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .join {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+    .e-larning-carousel-caption h1 {
+        font-size: x-large;
+    }
+
+    .e-larning-carousel-caption p {
+        font-size: small;
+    }
+
+    .e-larning-carousel-caption p>a {
+        font-size: small;
+    }
+
+    .join {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:575px) {
+
+    .e-larning-carousel-caption h1 {
+        font-size: 80%;
+        margin-bottom: 3px;
+    }
+
+    .e-larning-carousel-caption p {
+        font-size: 45%;
+        margin-bottom: 3px;
+    }
+
+    .e-larning-carousel-caption p>a {
+        font-size: 70%;
+        padding: 3px 5px;
+    }
+
+    .join {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+ .dropbtn {
+  background-color: Aqua;
+  color: grey;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 50%;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: blue;}
+.soci {
+  text-align: center;
+}
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+
+  /*fdfxcvhjfdgfghjihgf*/
+
+  .content-section {
+    background: #ffffff;
+    /* border-radius: 20px; */
+    padding: 10px 20px;
+    /* border: 1px solid #dddddd; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .article-title {
+    color: #444444;
+  }
+
+  a.article-title:hover {
+    color: #9900ff;
+    text-decoration: none;
+  }
+
+  .article-content {
+    white-space: pre-line;
+  }
+
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+
+  .article-metadata {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+
+  .account-heading {
+    font-size: 2.5rem;
+  }
+   svg{
+       width: 50px;
+       height: 50px;
+   }
+
+#auth-links{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 12px 3px;
+    margin: 10px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 5px;
+
+}
+#auth-links:hover{
+    font-weight: bold;
+    background: #03e9f4;
+    text-decoration: none;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+#auth-links:nth-child(1){
+    /* filter: hue-rotate(270deg); */
+}
+#auth-links:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+#auth-links span{
+    position: absolute;
+    display: block;
+}
+#auth-links span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+#auth-links span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+#auth-links span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+#auth-links span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+#gist-btn{
+    color: black;
+    background: linear-gradient(270deg, rgb(247, 0, 255) 0%, rgb(98, 0, 255) 100%);
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#gist-btn:hover{
+    text-decoration: none;
+}
+
+.cardd{
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.849);
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+  }
+  #profile-h1{
+      color: rgb(255, 255, 255);
+      font-family: 'Poppins', sans-serif;
+
+  }
+  .title {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(228, 228, 228);
+    font-size: 18px;
+  }
+
+  button {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: 1s;
+    background: linear-gradient(270deg, rgb(247, 0, 255) 0%, rgb(98, 0, 255) 100%);
+  }
+
+  /* a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  button:hover, a:hover {
+    opacity: 0.7;
+    background-color: rgb(3, 1, 5);
+  } */
+
+  #profile-img{
+    margin-top: 20px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.486);
+    border-radius: 50px;
+  }
+  
+  .dropbtn {
+    background-color: Aqua;
+    color: grey;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 50%;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: blue;}
+
+  ul {
+    margin: 0;
+  }
+
+  .bg-steel {
+    /* background-color: #1a1a1a; */
+    background: linear-gradient(270deg,  rgb(49, 0, 33) 0%, rgb(46, 0, 119) 100%);
+
+  }
+  .foter{
+    background-color: rgb(56, 56, 56);
+  }
+    </style>
+</head>
+
+<body>
+    <!-- header Section Start From Here  -->
+    <header>
+      <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="ora" href="/" style="font-size: 30px; font-family: 'Brush Script MT', cursive;">ORA Learning</a>
+          <!--<img src="{% static 'images/logo.png ' %}" alt="logo" height="50" width="50">-->
+            <!--<svg style="padding-right: 10px;" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m512 45c0-24.853-20.147-45-45-45h-422c-24.853 0-45 20.147-45 45v90c0 8.284 6.716 15 15 15h482c8.284 0 15-6.716 15-15z" fill="#7d81e7"/><path d="m467 0h-211v150h241c8.284 0 15-6.716 15-15v-90c0-24.853-20.147-45-45-45z" fill="#5e69e2"/><g><g><path d="m81 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#fff79f"/></g><g><path d="m161 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#90e36a"/></g><g><path d="m241 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#ff80a7"/></g></g><g><path d="m0 135v332c0 24.813 20.187 45 45 45h422c24.813 0 45-20.187 45-45v-332z" fill="#f9f9f9"/></g><path d="m256 512h211c24.813 0 45-20.187 45-45v-332h-256z" fill="#e2dff4"/></g><g><g><g><path d="m173.078 377.005c-10.979 0-11.626-.111-12.339-.233-4.801-.823-8.311-4.985-8.311-9.856v-99.916c0-5.523 4.478-10 10-10s10 4.477 10 10v90c6.774-.001 16.206-.036 24.962-.084h.057c5.497 0 9.968 4.44 9.999 9.944.03 5.522-4.421 10.024-9.944 10.056-11.356.063-19.104.089-24.424.089z" fill="#0a789b"/></g><path d="m116.811 309.839c4.165-5.525 6.638-12.393 6.638-19.829 0-18.202-14.809-33.01-33.01-33.01h-29.047c-5.522 0-10 4.477-10 10v100c0 2.66 1.06 5.21 2.944 7.087 1.875 1.866 4.412 2.913 7.056 2.913h.044c.268-.001 26.811-.119 34.076-.119 20.356 0 36.917-16.561 36.917-36.917 0-12.427-6.179-23.431-15.618-30.125zm-26.372-32.839c7.174 0 13.01 5.836 13.01 13.01s-5.836 13.01-13.01 13.01c-2.139 0-19.048.027-19.048.027v-26.047zm5.073 79.881c-4.385 0-15.704.042-24.12.076v-33.877c2.708-.011 24.12-.032 24.12-.032 9.328 0 16.917 7.589 16.917 16.917s-7.589 16.916-16.917 16.916z" fill="#0a789b"/><g><path d="m407.446 377c-33.084 0-60-26.916-60-60s26.916-60 60-60c12.021 0 23.624 3.545 33.553 10.252 4.576 3.092 5.78 9.308 2.688 13.884-3.091 4.577-9.31 5.779-13.884 2.689-6.61-4.465-14.341-6.826-22.357-6.826-22.056 0-40 17.944-40 40s17.944 40 40 40c20.124 0 29.573-14.565 32.298-30h-19.051c-5.522 0-10-4.477-10-10s4.478-10 10-10h29.915c5.522 0 10 4.477 10 10 0 35.328-21.861 60.001-53.162 60.001z" fill="#08475e"/></g><g><path d="m267.446 377c-33.084 0-60-26.916-60-60s26.916-60 60-60 60 26.916 60 60-26.916 60-60 60zm0-100c-22.056 0-40 17.944-40 40s17.944 40 40 40 40-17.944 40-40-17.944-40-40-40z" fill="#0a789b"/></g><path d="m267.446 257c-3.915 0-7.739.389-11.446 1.108v20.569c3.629-1.086 7.469-1.677 11.446-1.677 22.056 0 40 17.944 40 40s-17.944 40-40 40c-3.977 0-7.818-.592-11.446-1.677v20.569c3.708.719 7.532 1.108 11.446 1.108 33.084 0 60-26.916 60-60s-26.916-60-60-60z" fill="#08475e"/></g></g></g></svg>-->
+          <!-- <a class="navbar-brand mr-4" href="">Django Blog</a> -->
+          <buttwon class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </buttwon>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+                {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'display' %}">HOME</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
+              <a class="nav-item nav-link" href="{% url 'course' %}">Courses</a>    
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <!-- <a class="nav-item nav-link" href="#">Login</a>
+              <a class="nav-item nav-link" href="#">Register</a> -->
+              <!-- <button class="noselect">Create Post</button> -->
+<!--                <h3 style="color: white;">Hello {{request.user}}</h3>-->
+                <!--<a href="{% url 'blog-new' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Create Post
+            </a>-->
+                <a href="{% url 'profile' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <h5 style="color: white; font-size: 15px;">Hello {{request.user}}</h5>
+            </a>
+                <a href="{% url 'profile' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Profile
+            </a>
+              <a href="{% url 'logout' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Logout
+            </a>
+                {% else %}
+              <a href="{% url 'login' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </a>
+            <a href="{% url 'register' %}" id="auth-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Register
+            </a>
+            <!-- <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Neon button
+            </a> -->
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <h1>Hello World</h1>
+     <!-- Main Section Start From Here  -->
+     <main class="container">
+        <!-- Courses Section Start From Here  -->
+        <section class="mt-5" id="courses">
+            <h1 class="text-center fw-semibold">Discover Our Popular Courses</h1>
+            <p class="text-center fs-5 mt-3">We Conduct More Than 10 Differnet Differnet Digital Courses That Helps a
+                learner
+                to get better benefit and make yourself a good position. So that he can go forward and explore more of
+                his interest.
+            </p>
+            <div class="mt-5">
+                <div class="row g-3">
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+
+                        <div class="card">
+                            <div class="row g-0">
+
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-1.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                       <a href="{% url 'blog-home' %}"><h5 class="card-title fs-4 fw-semibold">Python</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ??</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-2.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'java-home' %}"><h5 class="card-title fs-4 fw-semibold">JAVA</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ??</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-3.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'html-home' %}"><h5 class="card-title fs-4 fw-semibold">HTML/CSS</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-4.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'node-home' %}"><h5 class="card-title fs-4 fw-semibold">Node JS</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'js-home' %}"><h5 class="card-title fs-4 fw-semibold">JavaScript</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-6.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'pydjango-home' %}"><h5 class="card-title fs-4 fw-semibold">Django</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'gd-home' %}"><h5 class="card-title fs-4 fw-semibold">Graphic Design</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="{% url 'cpp-home' %}"><h5 class="card-title fs-4 fw-semibold">C++</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Unused Course-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4 col-sm-12">
+                                    <img src="{% static 'images/course/course-5.png' %}" class="img-fluid rounded-start h-100 w-100"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 align-self-center">
+                                    <div class="card-body">
+                                        <a href="#"><h5 class="card-title fs-4 fw-semibold">Unknown</h5></a> 
+                                        <p class="card-text fs-6">Some quick example text to build on the
+                                            card title and make
+                                            up the bulk of the card.</p>
+                                        <p class="card-text fs-5 fw-bold text-primary">Price : NGN ???</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Unused Course-->
+
+                    
+
+                </div>
+            </div>
+
+            
+        </section>
+        <!-- Courses Section End Here  -->
+</main>
+
+
+    <footer class="foter" >
+        <ul class="nav justify-content-center border-bottom"  style="margin-top: 60px;">
+          <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="admin/" class="nav-link px-2 text-muted">Admin</a></li>
+          <li class="nav-item"><a href="{% url 'blog-contact' %}" class="nav-link px-2 text-muted">Contact Us</a></li>
+          <li class="nav-item"><a href="{% url 'blog-about' %}" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; ORA Learning 2022</p>
+        <div class="soci">
+        <a href="#" id="auth-links"><i class="fa fa-dribbble"></i></a>
+        <a href="#" id="auth-links"><i class="fa fa-twitter"></i></a>
+        <a href="#" id="auth-links"><i class="fa fa-linkedin"></i></a>
+        <a href="#" id="auth-links"><i class="fa fa-facebook"></i></a>
+      </div>
+      </footer>
+
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Footer Section End Here  -->
+    <!-- Bootstrap JavaScript Link Here  -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
