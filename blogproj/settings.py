@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'blogproj.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgres://blogproj:ifwxcDjWZfDb0bLwy3yaylL06ChLRJoq@dpg-cf8gn4ha6gdpabbaafbg-a/blogproj',
+        default='postgres://blogproj:ifwxcDjWZfDb0bLwy3yaylL06ChLRJoq@dpg-cf8gn4ha6gdpabbaafbg-a.oregon-postgres.render.com/blogproj',
         conn_max_age=600
     )
 }
