@@ -1,7 +1,7 @@
 databases:
   - name: blogproj
-    databaseName: blogproj
-    user: blogproj
+    databaseName: postgres
+    user: postgres
 
 services:
   - type: web
