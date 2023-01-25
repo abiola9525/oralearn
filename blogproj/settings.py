@@ -93,10 +93,11 @@ WSGI_APPLICATION = 'blogproj.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/blogproj',
+        default='postgres://blogproj:ifwxcDjWZfDb0bLwy3yaylL06ChLRJoq@dpg-cf8gn4ha6gdpabbaafbg-a/blogproj',
         conn_max_age=600
     )
 }
